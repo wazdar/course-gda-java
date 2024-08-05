@@ -1,5 +1,5 @@
 package com.gda.example.app;
 
-public class MyAnotheBeta {
+public class MyAnotherBeta {
 
 }
