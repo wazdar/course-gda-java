@@ -2,7 +2,7 @@
 default_stages: [commit, manual]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.6.0
     hooks:
       - id: check-yaml
       - id: check-json
@@ -25,26 +25,26 @@ repos:
         description: Detects the presence of private keys.
       - id: detect-private-key
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.5
+    rev: v2.3.0
     hooks:
       - id: codespell
         entry: codespell --ignore-words ignore-spelling-words.txt --skip="cspell.json"
         description: Spell checker
   - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: v0.9.0
+    rev: v0.10.0
     hooks:
       - id: shellcheck
         description: Run shellcheck against scripts
         args: ["--severity=warning"]
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v9.5.0
+    rev: v9.18.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
         description: Validate commit message aligns with expected conventions
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.0
+    rev: v8.19.2
     hooks:
       - id: gitleaks
   # TODO: some java quality check
