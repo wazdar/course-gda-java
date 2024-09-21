@@ -5,6 +5,8 @@ package com.gda.example.app;
  */
 public class HelloMain {
     public static String defaultPort = "8080";
+    public static String sampleApiUrl = "https://api.example.com/data";
+    public static String sampleApiKey = "";
 
     public static void main(String[] args) {
 
@@ -12,5 +14,7 @@ public class HelloMain {
         MyServer httpServer = new MyServer();
         httpServer.Start(port);
 
+        ApiConnection apiConnection = new ApiConnection(sampleApiUrl, sampleApiKey);
+        apiConnection.sendGetRequest();
     }
 }
