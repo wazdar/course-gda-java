@@ -9,6 +9,7 @@ public class ApiConnection {
         this.apiUrl = apiUrl;
         this.apiKey = apiKey;
     }
+    
 
     public String sendGetRequest() {
         // LOGIC HERE
